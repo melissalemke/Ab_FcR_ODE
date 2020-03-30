@@ -17,7 +17,8 @@ a limited benefit of increasing IgG1 concentration", currently
 in submission 
 
 The code is separated into 4 distinct folders containing all of
-the necessary Matlab scripts to run each type of analysis.
+the necessary Matlab scripts to run each type of analysis. Figures
+not specifically created here can be replicated using this base code.
 
 	1. Baseline Simulation - Will run one simulation at all
 		baseline parameters and plot a timecourse showing
