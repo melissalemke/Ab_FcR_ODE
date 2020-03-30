@@ -106,6 +106,7 @@ Basic framework used in folders 1-3:
 		convservation equations etc.
 
 Folder specific information:	
+
 	1. Baseline Simulation: 
 		Simulate.m here will plot the timecourse for you
 		Takes ~1 sec
