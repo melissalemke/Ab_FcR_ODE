@@ -1,6 +1,4 @@
 # Ab_FcR_ODE
-NOTE: Currently confirming permission to upload folder 4 from the Kirschner Lab
-
 Arnold Lab, University of Michigan
 
 Melissa Lemke, PhD Candidate
@@ -162,4 +160,3 @@ Folder specific information:
 			(in “lhs_ode_igg_sutype” folder)
 			3. Change: Load(‘your output file’)
 			4. Run 
-
