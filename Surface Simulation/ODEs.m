@@ -5,9 +5,8 @@
 function [dydt] = ODEs(t,y,params)
 % ODEs defines the system of ODEs describing the model
 
-% assign parameter values
-f1 = params(1);%env-IgG1 kon forward
-r1 = params(2);%koff reverse
+f1 = params(1);%env-IgG1 kon
+r1 = params(2);%koff
 f2 = params(3);%env-IgG2
 r2 = params(4);
 f3 = params(5);%env-IgG3
@@ -29,12 +28,11 @@ g4tot    = params(20);%mM
 etot    = params(21);%mM 
 ftot    = params(22);%mM 
 
-% assign complex concentrations 
-e1 = y(1); %env+IgG1
-e2 = y(2);  
+e1 = y(1); 
+e2 = y(2); 
 e3 = y(3); 
 e4 = y(4);
-e11 = y(5); %env+IgG1+IgG1
+e11 = y(5); 
 e12 = y(6);
 e13 = y(7); 
 e14 = y(8); 
@@ -44,7 +42,7 @@ e24 = y(11);
 e33 = y(12);
 e34 = y(13);
 e44 = y(14);
-fe11 = y(15); %FcR dimer+IgG+IgG+env
+fe11 = y(15); 
 fe12 = y(16);
 fe13 = y(17); 
 fe14 = y(18); 
@@ -55,10 +53,9 @@ fe33 = y(22);
 fe34 = y(23);
 fe44 = y(24);
 
-% on an off rates for each specific reaction
-k1f = f1; %kon for reaction 1
-k1r = r1; %koff for reaction 1
-k2f = f2; %kon for reaction 2 ...
+k1f = f1;
+k1r = r1;
+k2f = f2;
 k2r = r2;
 k3f = f3;
 k3r = r3;
@@ -96,8 +93,8 @@ k19f = f3;
 k19r = r3;
 k20f = f4;
 k20r = r4;
-k21f = (f5+f5)/2; %kon/off for reaction 21 - 30 are the average of the two 
-k21r = (r5+r5)/2; %kon/offs for the two IgGs involved in the reaction
+k21f = (f5+f5)/2;
+k21r = (r5+r5)/2;
 k22f = (f5+f6)/2;
 k22r = (r5+r6)/2;
 k23f = (f5+f7)/2;

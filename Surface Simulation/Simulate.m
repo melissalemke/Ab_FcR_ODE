@@ -3,7 +3,7 @@
 % Last edit: March 11th, 2020
 
 %% Run single simulation
-function [yend, steadystate]  = Simulate(params, paramnames, altered,alteration,fcr_ttl) 
+function [yend, steadystate]  = Simulate(params, paramnames, altered,alteration) 
 %% Run Normal Simulation
 global tStep tArray varArray;
 
@@ -50,25 +50,5 @@ ycut = y(1:min(tStep,length(y(:,1))),:);
     
     % Steady state definition (subject to change with different baseline
     % parameters)
-    steadystate = sum(abs(yend-ycut(end-floor(0.05*length(ycut(:,1))),:)) > 1e-5*yend);
-
-    % Plot the concentrations of all species and complexes over time
-    figure()
-    set(groot,'defaultAxesLineStyleOrder','-|--|:|-.')
-    plot(t,ycut,'LineWidth',3);
-    set(gca,'FontSize',11,'Yscale','log')
-    xlabel('Time (s)'); ylabel('Concentration of Complex (mM)'); 
-    ttl = fcr_ttl+' Timecourse';
-    title(ttl)
-
-    complexname=['env-IgG1', 'env-IgG2', 'env-IgG3', 'env-IgG4','env-IgG1-IgG1', 'env-IgG1-IgG2','env-IgG1-IgG3', 'env-IgG1-IgG4', 'env-IgG2-IgG2', 'env-IgG2-IgG3'...
-    'env-IgG2-IgG4','env-IgG3-IgG3','env-IgG3-IgG4','env-IgG4-IgG4','FcR-env-IgG1-IgG1', 'FcR-env-IgG1-IgG2','FcR-env-IgG1-IgG3', 'FcR-env-IgG1-IgG4', 'FcR-env-IgG2-IgG2', 'FcR-env-IgG2-IgG3'...
-    'FcR-env-IgG2-IgG4','FcR-env-IgG3-IgG3','FcR-env-IgG3-IgG4','FcR-env-IgG4-IgG4',"IgG1", "IgG2", "IgG3", "IgG4", "env", "FcR", "FcR complexes with IgG1 and IgG3 only", "FcR complexes including IgG1 and IgG3","All FcR complexes"];
-    legend(complexname, 'Location', 'southeast');
-    fig = gcf;
-    fig.PaperUnits = 'inches';
-    fig.PaperPosition = [0 0 9.25 4.5];
-    figttl = strrep(strcat(datestr(today()),"_",ttl(1,:)),'.','_');
-    saveas(fig,figttl)
-    
+    steadystate = sum(abs(yend-ycut(end-floor(0.025*length(ycut(:,1))),:)) > 1e-2*yend);
 end
