@@ -129,7 +129,7 @@ Folder specific information:
 		1. add the 'matlab-ode-lhs'  folder to your path
 		2. Navigate to the 'lhs_ode_igg_subtype' folder
 		3. Type in command window
-		   >>lhs_ode_run_new(‘lhs_ode_igg_subtype_settings’)
+		   >>lhs_ode_run_new(â€˜lhs_ode_igg_subtype_settingsâ€™)
 		4. May take a few hours up to about a day
 			lowering the sample size (line 165) in 
 			"lhs_ode_subtype/lhs_ode_igg_settings.m"
@@ -142,7 +142,7 @@ Folder specific information:
 			1. Make sure you have superbar.m and 
 			supererror.m in your matlab path
 			2. Open plot_prcc.m 
-			(in “lhs_ode_igg_sutype” folder)
-			3. Change: Load(‘your output file’)
+			(in â€œlhs_ode_igg_sutypeâ€ folder)
+			3. Change: Load(â€˜your output fileâ€™)
 			4. Run 
 
