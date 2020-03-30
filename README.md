@@ -80,15 +80,15 @@ the necessary Matlab scripts to run each type of analysis.
 		basic instructions on how to run the code as is and
 		plot our results.
 
-		Plots: PRCC values and significances (Fig 2B-c)
+		Plots: PRCC values and significances (Fig 2B-C)
 
 Instructions:		
 Most folders (1-3) contain a 'Run_Me...m' file that you will run 
 first to run the simulations and obtain the data. Some folders also 
-contain a 'Make_figure' file used to plot the figures once you've 
+contain a 'Make_figure.m' file used to plot the figures once you've 
 obtained the data. The rest of the files within the folder are
 functions used by these two scripts that you should not need to
-directly interact with. The excpetion to this is the "Global 
+directly interact with. The exception to this is the "Global 
 Sensitivity" folder. 
 
 Basic framework used in folders 1-3:
