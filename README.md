@@ -81,6 +81,10 @@ not specifically created here can be replicated using this base code.
 
 		Plots: PRCC values and significances (Fig 2B-C)
 
+Installation:
+Download all folders and work within these folders in MATLAB. Typical 
+install time is just that needed to download (~1 min).
+
 Instructions:		
 Most folders (1-3) contain a 'Run_Me...m' file that you will run 
 first to run the simulations and obtain the data. Some folders also 
