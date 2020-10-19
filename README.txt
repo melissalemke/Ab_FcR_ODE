@@ -2,7 +2,7 @@ Arnold Lab, University of Michigan
 Melissa Lemke, PhD Candidate
 Matlab2019a - parallel computing toolbox
 Windows 10
-March 2020
+October 2020
 
 Code used in "A personalized systems approach to evaluate 
 antibody-Fc receptor activation post RV144 vaccination reveals 
@@ -71,10 +71,6 @@ not specifically created here can be replicated using this base code.
 
 		Plots: PRCC values and significances (Fig 2B-c)
 
-Installation:
-Download all folders and work within these folders in MATLAB. Typical 
-install time is just that needed to download (~1 min).
-
 Instructions:		
 Most folders (1-3) contain a 'Run_Me...m' file that you will run 
 first to run the simulations and obtain the data. Some folders also 
@@ -133,7 +129,7 @@ Folder specific information:
 		1. add the 'matlab-ode-lhs'  folder to your path
 		2. Navigate to the 'lhs_ode_igg_subtype' folder
 		3. Type in command window
-		   >>lhs_ode_run_new(â€˜lhs_ode_igg_subtype_settingsâ€™)
+		   >>lhs_ode_run_new(‘lhs_ode_igg_subtype_settings’)
 		4. May take a few hours up to about a day
 			lowering the sample size (line 165) in 
 			"lhs_ode_subtype/lhs_ode_igg_settings.m"
@@ -146,7 +142,7 @@ Folder specific information:
 			1. Make sure you have superbar.m and 
 			supererror.m in your matlab path
 			2. Open plot_prcc.m 
-			(in â€œlhs_ode_igg_sutypeâ€ folder)
-			3. Change: Load(â€˜your output fileâ€™)
+			(in “lhs_ode_igg_sutype” folder)
+			3. Change: Load(‘your output file’)
 			4. Run 
 

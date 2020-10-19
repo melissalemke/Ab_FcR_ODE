@@ -198,7 +198,7 @@ ode.odeModelHandle = @lhs_ode_igg_ode;
 
 % Redefine the ODE solver time limit, if you want a value different than the                                  
 % default. In seconds. Can be fractional, ex. 1.5 or 0.5. 
-ode.solverTimeLimit = '1000.0';
+ode.solverTimeLimit = '10000000.0';
 
 % Set saveOnError to define how to handle the case where the ODE solver
 % fails. saveOnError = 1 means to pad the output matrix for the solution
@@ -221,7 +221,7 @@ ode.saveOnError = 0;
 ode.parameters = ...
 {
     { 'f1', 'u', 0.04, 200 } ... %'u' = uniform, min, max
-    { 'r1', 'u', 8e-7, 0.004  } ...
+    { 'r1', 'u', 8e-7, 0.004  } ...% ALLL IN mM
     { 'f2', 'u', 0.04, 200  } ...
     { 'r2', 'u', 8e-7, 0.004 } ...
     { 'f3', 'u', 0.04, 200  } ...

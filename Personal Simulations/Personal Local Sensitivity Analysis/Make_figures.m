@@ -38,7 +38,7 @@ sense_metric = (squeeze(max(patient_sense_3D,[],2))-squeeze(min(patient_sense_3D
 
 % Heatmap
 figure()
-imagesc(10^6*sense_metric)%converting from mM to nM
+imagesc(sense_metric)
 xlabel("Vaccinee IDs")
 set(gca,'ytick',[1:22],'yticklabel',paramnames,'xtick',[1:105],'xticklabel',patient_id)
 xtickangle(270)
@@ -51,8 +51,8 @@ clim = caxis();
 %% Max complex formation level acheived between 0.004X-20X for each parameter
 com_form = squeeze(max(patient_sense_3D,[],2))';
 labels = paramnames;
-med_thresh = 8e-7; %in mM
-high_thresh = 1.0646e-6; %in mM
+med_thresh = 8e-1; %in nM
+high_thresh = 1.0646; %in nM
 
 medium = sum(com_form>=med_thresh  & com_form<high_thresh);
 high = sum(com_form>=high_thresh);

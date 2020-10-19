@@ -57,7 +57,7 @@ ycut = y(1:min(tStep,length(y(:,1))),:);
     set(groot,'defaultAxesLineStyleOrder','-|--|:|-.')
     plot(t,ycut,'LineWidth',3);
     set(gca,'FontSize',11,'Yscale','log')
-    xlabel('Time (s)'); ylabel('Concentration of Complex (mM)'); 
+    xlabel('Time (s)'); ylabel('Concentration of Complex (nM)'); 
     ttl = fcr_ttl+' Timecourse';
     title(ttl)
 
